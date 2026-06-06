@@ -3,41 +3,48 @@
 ## AIM
 To develop a Recurrent Neural Network (RNN) model for predicting stock prices using historical closing price data.
 
-## Problem Statement and Dataset
+## Problem Statement and Dataset :
 Stock price prediction is an important task in financial analysis because investors and organizations rely on accurate forecasts to make better investment decisions. Traditional statistical methods often struggle to capture complex patterns in time-series data such as stock prices.
 
 The objective of this project is to develop a Recurrent Neural Network (RNN) model that can learn patterns from historical stock price data and predict future prices. Using the historical closing prices of Google stock, the model will be trained on a training dataset and evaluated on a separate test dataset.
 
 The system will involve loading the datasets, preprocessing the data, building and training an RNN model, and then predicting stock prices for the test dataset. Finally, the predicted values will be compared with the actual stock prices to evaluate the performance and accuracy of the model.
 
-# train dataset
-
-<img width="882" height="843" alt="image" src="https://github.com/user-attachments/assets/188c5db9-134a-4bc5-9003-2299e308da19" />
 
 
-# test dataset
-<img width="672" height="757" alt="image" src="https://github.com/user-attachments/assets/c6c678da-3c29-4456-8bc8-90bf5b35a0b7" />
+### Train dataset
+<img width="882" height="843" alt="Screenshot 2026-03-09 092537 TRAIN DATA 5" src="https://github.com/user-attachments/assets/fc43b42b-4e61-4692-9f1b-315e2b51ec43" />
+
+### Test dataset
+<img width="672" height="757" alt="560039563-051b9b7c-fefa-488b-8981-538492c73625" src="https://github.com/user-attachments/assets/0399afc7-8510-4e0d-b71e-3702f4545337" />
+
+
 
 
 ## DESIGN STEPS
 ### STEP 1: 
+
 Load and normalize data, create sequences.
 
-### STEP 2:
+### STEP 2: 
+
 Convert data to tensors and set up DataLoader.
 
-### STEP 3:
+### STEP 3: 
+
 Define the RNN model architecture.
 
-### STEP 4:
+### STEP 4: 
+
 Summarize, compile with loss and optimizer.
 
-### STEP 5:
+### STEP 5: 
+
 Train the model with loss tracking.
 
-### STEP 6:
-Predict on test data, plot actual vs. predicted prices.
+### STEP 6: 
 
+Predict on test data, plot actual vs. predicted prices.
 
 
 
@@ -45,9 +52,9 @@ Predict on test data, plot actual vs. predicted prices.
 
 ### Name: THAVANESH B
 
-### Register Number:212224040352
+### Register Number: 212224040352
 
-```
+```python
 
 import numpy as np
 import pandas as pd
@@ -139,8 +146,8 @@ def train_model(model, train_loader, criterion, optimizer, epochs=20):
         train_losses.append(total_loss / len(train_loader))
         print(f"Epoch [{epoch+1}/{epochs}], Loss: {total_loss / len(train_loader):.4f}")
 # Plot training loss
-    print('Name: ROGITH J')
-    print('Register Number: 212224040280')
+    print('Name:THAVANESH B')
+    print('Register Number: 212224040352')
     plt.plot(train_losses, label='Training Loss')
     plt.xlabel('Epoch')
     plt.ylabel('MSE Loss')
@@ -160,8 +167,8 @@ predicted_prices = scaler.inverse_transform(predicted)
 actual_prices = scaler.inverse_transform(actual)
 
 # Plot the predictions vs actual prices
-print('Name: ROGITH J')
-print('Register Number: 212224040280')
+print('Name:THAVANESH B')
+print('Register Number: 212224040352')
 plt.figure(figsize=(10, 6))
 plt.plot(actual_prices, label='Actual Price')
 plt.plot(predicted_prices, label='Predicted Price')
@@ -183,14 +190,23 @@ print(f'Actual Price: {actual_prices[-1]}')
 
 ## Training Loss Over Epochs Plot
 
-<img width="717" height="568" alt="image" src="https://github.com/user-attachments/assets/9bf1e807-c0bd-4cb6-8f71-2e9c44f74944" />
+<img width="717" height="568" alt="Screenshot 2026-02-27 112322" src="https://github.com/user-attachments/assets/0ccf39b9-ddfb-4969-8558-fdd146797044" />
+
+
+
+
 
 ## True Stock Price, Predicted Stock Price vs time
 
-<img width="277" height="50" alt="image" src="https://github.com/user-attachments/assets/a1ccd539-23f9-48d5-8e84-3f9fc7df61ff" />
+
+<img width="1255" height="795" alt="image" src="https://github.com/user-attachments/assets/4a18ad6d-58f2-4c80-b17a-b8f2614ba149" />
+
 
 ### Predictions
-<img width="1255" height="795" alt="image" src="https://github.com/user-attachments/assets/aca2bc3d-40a0-413a-bf4c-8e0fbce9e374" />
+
+
+<img width="277" height="50" alt="image" src="https://github.com/user-attachments/assets/cf0743f2-ea0f-47ee-b9a5-5890120c7c91" />
+
 
 ## RESULT
 Thus, a Recurrent Neural Network (RNN) model for predicting stock prices using historical closing price data has been developed successfully.
